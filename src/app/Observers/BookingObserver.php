@@ -3,6 +3,8 @@
 namespace App\Observers;
 
 use App\Models\Booking;
+use App\Notifications\ResourceBooked;
+use Illuminate\Support\Facades\Notification;
 
 class BookingObserver
 {
@@ -11,7 +13,9 @@ class BookingObserver
      */
     public function created(Booking $booking): void
     {
-        //
+        Notification::route('mail', [
+            config('mail.from.address') => config('mail.from.name'),
+        ])->notify(new ResourceBooked($booking->load(Booking::MODEL_RELATIONS)));
     }
 
     /**

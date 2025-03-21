@@ -20,8 +20,6 @@ use OpenApi\Annotations as OA;
  */
 class BookingController extends Controller
 {
-    protected const MODEL_RELATIONS = ['resource', 'user'];
-
     public function __construct(protected BookingService $bookingService)
     {
         //
@@ -41,7 +39,7 @@ class BookingController extends Controller
      */
     public function index(): AnonymousResourceCollection
     {
-        return BookingResource::collection($this->bookingService->getAll(static::MODEL_RELATIONS));
+        return BookingResource::collection($this->bookingService->getAll(Booking::MODEL_RELATIONS));
     }
 
     /**
@@ -91,7 +89,7 @@ class BookingController extends Controller
             return response()->json(['status' => $th->getMessage()])->setStatusCode(422);
         }
 
-        return response()->json(new BookingResource($booking))->setStatusCode(201);
+        return response()->json(new BookingResource($booking->load(Booking::MODEL_RELATIONS)))->setStatusCode(201);
     }
 
     /**
@@ -117,7 +115,7 @@ class BookingController extends Controller
      */
     public function show(Booking $booking): BookingResource
     {
-        return new BookingResource($booking->load(static::MODEL_RELATIONS));
+        return new BookingResource($booking->load(Booking::MODEL_RELATIONS));
     }
 
     /**
