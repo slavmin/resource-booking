@@ -5,7 +5,6 @@ namespace App\Services;
 use App\Contracts\BookingRepositoryInterface;
 use App\Models\Booking;
 use Carbon\CarbonPeriod;
-use http\Exception\InvalidArgumentException;
 use Illuminate\Contracts\Database\Eloquent\Builder;
 
 class BookingService
