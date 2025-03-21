@@ -19,11 +19,12 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withExceptions(function (Exceptions $exceptions) {
         $exceptions->render(function (Exception $e, Request $request) {
             if ($request->is('api/*')) {
-                $statusCode = !empty($e->getCode()) ? $e->getCode() : (!empty($e->status) ? $e->status : 500);
+                $statusCode = !empty($e->getCode()) ? $e->getCode()
+                    : (!empty($e->status) ? $e->status : (!empty($e->getStatusCode()) ? $e->getStatusCode() : 500));
+
                 $message = Str::contains($e->getMessage(), 'No query results for model') ? 'Not Found' : $e->getMessage();
-                return response()->json([
-                    'message' => $message,
-                ], $statusCode);
+
+                return response()->json(['message' => $message], $statusCode);
             }
 
             return $request->expectsJson();

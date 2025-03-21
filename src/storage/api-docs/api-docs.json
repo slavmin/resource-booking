@@ -12,7 +12,7 @@
                     "Bookings"
                 ],
                 "summary": "Display a listing of the resource",
-                "operationId": "8ab544c95157f4de3ec7c8403588a7af",
+                "operationId": "61f45b24d8d8154c953e2aee3c4b0c1d",
                 "responses": {
                     "200": {
                         "description": "OK"
@@ -24,7 +24,7 @@
                     "Bookings"
                 ],
                 "summary": "Store a newly created resource in storage",
-                "operationId": "deae6903772229fb4604e8ef70413d4a",
+                "operationId": "6e1e75ede753a8655c505cd98c57c7ca",
                 "parameters": [
                     {
                         "name": "resource_id",
@@ -75,7 +75,7 @@
                     "Bookings"
                 ],
                 "summary": "Display the specified resource",
-                "operationId": "1b7fee98dd96f6d8874317f4e641fb46",
+                "operationId": "55c8655b436147718c478a712b2dc39f",
                 "parameters": [
                     {
                         "name": "id",
@@ -100,7 +100,7 @@
                     "Bookings"
                 ],
                 "summary": "Remove the specified resource from storage",
-                "operationId": "d314a10df31d0a9b89471dab508e388a",
+                "operationId": "a89472407dc26914b54cf8f9751aa43c",
                 "parameters": [
                     {
                         "name": "id",
@@ -125,7 +125,7 @@
                     "Bookings"
                 ],
                 "summary": "Update the specified resource in storage",
-                "operationId": "90095efd521fb3b5300bc50693fb5714",
+                "operationId": "8a118dc1a1febe3d62e8f6483afefbcb",
                 "parameters": [
                     {
                         "name": "id",
@@ -187,7 +187,7 @@
                     "Resources"
                 ],
                 "summary": "Display a listing of the resource",
-                "operationId": "c6539b41a3ad33c9e5a24bc455892021",
+                "operationId": "dcd8a548291f6975f165697969797dae",
                 "responses": {
                     "200": {
                         "description": "OK"
@@ -199,7 +199,7 @@
                     "Resources"
                 ],
                 "summary": "Store a newly created resource in storage",
-                "operationId": "5e6fcc2ed877a1f865f2abc700ec6b41",
+                "operationId": "de8c8265c94763fd4ee1ee535b7d0f66",
                 "parameters": [
                     {
                         "name": "name",
@@ -242,7 +242,7 @@
                     "Resources"
                 ],
                 "summary": "Display the specified resource",
-                "operationId": "fdf6a641abebf8a9a2b028c756555d46",
+                "operationId": "d3788b011b3b541ed1fc68fbd49178d3",
                 "parameters": [
                     {
                         "name": "id",
@@ -267,7 +267,7 @@
                     "Resources"
                 ],
                 "summary": "Remove the specified resource from storage",
-                "operationId": "3589b907de9a79831b059aba47e854e2",
+                "operationId": "540b39baee6a0499f5eea11627cf58a1",
                 "parameters": [
                     {
                         "name": "id",
@@ -292,7 +292,7 @@
                     "Resources"
                 ],
                 "summary": "Update the specified resource in storage",
-                "operationId": "ac3394c69b4bd07d459ab00fda0a9361",
+                "operationId": "3dbbfef9c89cb4d904afaa09c5053834",
                 "parameters": [
                     {
                         "name": "id",
