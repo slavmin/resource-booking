@@ -95,9 +95,6 @@ class BookingController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     */
-    /**
      * @OA\Get(
      *     path="/api/bookings/{id}",
      *     summary="Display the specified resource",
